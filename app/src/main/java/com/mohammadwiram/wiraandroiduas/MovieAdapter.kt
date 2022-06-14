@@ -16,8 +16,12 @@ class MovieAdapter (var results: ArrayList<MainModel.Result>, val listener: OnAd
                     parent, false)
     )
 
+    // menampilkan count dari tiap data
+    // akan digunakan pada saat perpindahan ke activity detail
     override fun getItemCount() = results.size
 
+    // tiap data pada recyclerview ditampilkan data apinya
+    // menggunakan model yang sebelumnya telah di definisikan
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val result = results[position]
         holder.view.textView.text = result.title
@@ -32,6 +36,7 @@ class MovieAdapter (var results: ArrayList<MainModel.Result>, val listener: OnAd
 
     class ViewHolder(val view: View): RecyclerView.ViewHolder(view)
 
+    // set data pada main model
     fun setData(data: List<MainModel.Result>){
         this.results.clear()
         this.results.addAll(data)

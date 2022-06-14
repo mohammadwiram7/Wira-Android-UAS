@@ -10,6 +10,9 @@ class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
+
+        // menampilkan detail data berdasarkan id pada
+        // intent sebelumnya
         val intentTitle = intent.getStringExtra("intent_title")
         val intentImage = intent.getStringExtra("intent_image")
         supportActionBar!!.title = intentTitle

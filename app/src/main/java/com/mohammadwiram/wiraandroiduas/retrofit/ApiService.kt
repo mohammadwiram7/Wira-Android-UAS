@@ -7,6 +7,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiService {
 
+    // set api yang akan digunakan
+    // menggunakan library retrofit
+    // endpoint dari api berada di interface ApiEndpoint
     var BASE_URL:String="https://demo.lazday.com/rest-api-sample/"
     val endpoint: ApiEndpoint
         get() {

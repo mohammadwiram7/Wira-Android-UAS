@@ -5,7 +5,7 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface ApiEndpoint {
-
+    // menentukan endpoint dari api
     @GET("data.php")
     fun data(): Call<MainModel>
 }
